@@ -1,0 +1,374 @@
+/* ======== Variables de Colores Tecnológicos ======== */
+:root {
+  --tech-deep-night: #0F0F1A;
+  --tech-graphite: #1A1A2E;
+  --tech-white: #F5F5F7;
+  --tech-electric: #00D4FF;
+  --tech-digital: #6C4EF8;
+  --tech-cyber: #00FF9D;
+  --tech-energy: #FF6B6B;
+  --tech-warning: #FFD166;
+}
+
+/* ======== General ======== */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, var(--tech-deep-night), var(--tech-graphite));
+  color: var(--tech-white);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* ======== Navbar ======== */
+.nav {
+  background: rgba(26, 26, 46, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 12px;
+  border-bottom: 1px solid rgba(0, 212, 255, 0.2);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+.nav-link {
+  color: var(--tech-white) !important;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 8px 15px;
+  margin: 0 5px;
+  border-radius: 6px;
+}
+
+.nav-link:hover {
+  color: var(--tech-electric) !important;
+  background: rgba(0, 212, 255, 0.1);
+  transform: translateY(-1px);
+}
+
+.nav-link.active {
+  color: var(--tech-electric) !important;
+  background: rgba(0, 212, 255, 0.15);
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 15px;
+  right: 15px;
+  height: 2px;
+  background: var(--tech-electric);
+  border-radius: 1px;
+  box-shadow: 0 0 10px var(--tech-electric);
+}
+
+/* ======== Encabezado ======== */
+h1 {
+  text-align: center;
+  margin: 40px 0 30px;
+  font-weight: 700;
+  font-size: 2.5rem;
+  background: linear-gradient(90deg, var(--tech-electric), var(--tech-cyber));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+}
+
+/* ======== Formulario ======== */
+form {
+  max-width: 450px;
+  margin: auto;
+  background: linear-gradient(135deg, rgba(26, 26, 46, 0.9), rgba(15, 15, 26, 0.9));
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 
+      0 10px 30px rgba(0, 0, 0, 0.4),
+      0 0 0 1px rgba(0, 212, 255, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  position: relative;
+}
+
+form::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, var(--tech-electric), var(--tech-digital), var(--tech-cyber), var(--tech-electric));
+  border-radius: 18px;
+  z-index: -1;
+  opacity: 0.3;
+  filter: blur(8px);
+  animation: borderGlow 3s ease-in-out infinite;
+}
+
+@keyframes borderGlow {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.6; }
+}
+
+form label {
+  font-weight: 600;
+  margin-top: 15px;
+  display: block;
+  color: var(--tech-white);
+  font-size: 0.95rem;
+}
+
+form input[type="text"],
+form input[type="date"],
+form input[type="password"],
+form input[type="email"],
+form select,
+form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-top: 8px;
+  border-radius: 8px;
+  background: rgba(15, 15, 26, 0.7);
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  color: var(--tech-white);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  outline: none;
+  font-family: inherit;
+}
+
+form input[type="text"]:focus,
+form input[type="date"]:focus,
+form input[type="password"]:focus,
+form input[type="email"]:focus,
+form select:focus,
+form textarea:focus {
+  border-color: var(--tech-electric);
+  box-shadow: 
+      0 0 0 3px rgba(0, 212, 255, 0.1),
+      0 0 15px rgba(0, 212, 255, 0.2);
+  background: rgba(15, 15, 26, 0.9);
+}
+
+form input::placeholder {
+  color: rgba(245, 245, 247, 0.5);
+}
+
+/* Contenedor de botones del formulario */
+.form-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+form input[type="submit"],
+form input[type="reset"],
+form button[type="submit"],
+form button[type="reset"] {
+  flex: 1;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: relative;
+  overflow: hidden;
+}
+
+form input[type="submit"],
+form button[type="submit"] {
+  background: linear-gradient(90deg, var(--tech-electric), var(--tech-digital));
+  color: var(--tech-deep-night);
+}
+
+form input[type="submit"]:hover,
+form button[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+      0 5px 20px rgba(0, 212, 255, 0.4),
+      0 0 30px rgba(108, 78, 248, 0.3);
+  background: linear-gradient(90deg, var(--tech-digital), var(--tech-electric));
+}
+
+form input[type="reset"],
+form button[type="reset"] {
+  background: rgba(255, 107, 107, 0.1);
+  color: var(--tech-energy);
+  border: 1px solid rgba(255, 107, 107, 0.3);
+}
+
+form input[type="reset"]:hover,
+form button[type="reset"]:hover {
+  background: var(--tech-energy);
+  color: var(--tech-deep-night);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(255, 107, 107, 0.3);
+}
+
+/* ======== Footer ======== */
+footer {
+  margin-top: auto;
+  background: linear-gradient(135deg, var(--tech-graphite), var(--tech-deep-night));
+  color: var(--tech-white);
+  padding: 2rem 0;
+  border-top: 1px solid rgba(0, 212, 255, 0.1);
+}
+
+footer a {
+  text-decoration: none;
+  transition: all 0.3s ease;
+  color: var(--tech-white) !important;
+}
+
+footer a:hover {
+  color: var(--tech-electric) !important;
+  transform: scale(1.2);
+}
+
+/* Estilos para grupos de formulario mejorados */
+.form-group {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.form-group label {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--tech-white);
+  margin-bottom: 0.5rem;
+}
+
+.form-group label i {
+  margin-right: 0.5rem;
+  color: var(--tech-electric);
+  font-size: 1rem;
+}
+
+/* Estilos para select personalizado */
+.form-group select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%2300D4FF' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 12px;
+  padding-right: 40px;
+}
+
+/* Estilos para textarea */
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+  font-family: inherit;
+}
+
+/* Mensajes de validación */
+.field-error {
+  color: var(--tech-energy);
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+  display: block;
+}
+
+.field-success {
+  color: var(--tech-cyber);
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+  display: block;
+}
+
+/* ======== Responsive ======== */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+    margin: 30px 0 20px;
+  }
+  
+  form {
+    padding: 2rem 1.5rem;
+    margin: 0 1rem;
+  }
+  
+  .form-buttons {
+    flex-direction: column;
+  }
+  
+  form input[type="submit"],
+  form input[type="reset"],
+  form button[type="submit"],
+  form button[type="reset"] {
+    flex: none;
+  }
+}
+
+@media (max-width: 576px) {
+  form {
+    padding: 1.5rem 1rem;
+  }
+  
+  h1 {
+    font-size: 1.8rem;
+  }
+  
+  .nav {
+    padding: 10px;
+  }
+  
+  .nav-link {
+    padding: 6px 12px;
+    margin: 0 2px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Efectos de partículas para formularios (opcional) */
+.form-particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: var(--tech-electric);
+  border-radius: 50%;
+  animation: float 6s infinite ease-in-out;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(-20px) scale(1.2);
+    opacity: 0.8;
+  }
+}
+
+/* Clases utilitarias para colores tecnológicos */
+.text-tech-electric { color: var(--tech-electric); }
+.text-tech-digital { color: var(--tech-digital); }
+.text-tech-cyber { color: var(--tech-cyber); }
+.text-tech-energy { color: var(--tech-energy); }
+
+.bg-tech-deep { background-color: var(--tech-deep-night); }
+.bg-tech-graphite { background-color: var(--tech-graphite); }
+
+.border-tech-electric { border-color: var(--tech-electric); }
+.border-tech-digital { border-color: var(--tech-digital); }

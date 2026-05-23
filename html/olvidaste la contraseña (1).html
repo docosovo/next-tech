@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar Contraseña | Ingeniería Industrial</title>
+    <link rel="stylesheet" href="../css/olvidaste la contraseña (1).css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="recovery-container">
+        <div class="company-logo">
+            <img src="https://via.placeholder.com/150x80?text=Industrial+Eng" alt="Logo de la compañía">
+            <h1>Recuperar Contraseña</h1>
+            <p>Ingeniería Industrial S.A.</p>
+        </div>
+        
+        <div class="recovery-steps">
+            <div class="step active">
+                <span>1</span>
+                <p>Verificar email</p>
+            </div>
+            <div class="step">
+                <span>2</span>
+                <p>Código de verificación</p>
+            </div>
+            <div class="step">
+                <span>3</span>
+                <p>Nueva contraseña</p>
+            </div>
+        </div>
+        
+        <form id="recoveryForm" class="recovery-form">
+            <div class="form-group">
+                <label for="email"><i class="fas fa-envelope"></i> Correo Electrónico</label>
+                <input type="email" id="email" name="email" required placeholder="Ingresa tu email registrado">
+            </div>
+            
+            <button type="submit" class="recovery-btn">Enviar Código</button>
+            
+            <div class="back-to-login">
+                <a href="iniciar sección.html"><i class="fas fa-arrow-left"></i> Volver al inicio de sesión</a>
+            </div>
+        </form>
+        
+        <div class="success-message" id="successMessage" style="display: none;">
+            <i class="fas fa-check-circle"></i>
+            <h3>¡Correo enviado con éxito!</h3>
+            <p>Hemos enviado un código de verificación a tu correo electrónico. Por favor revisa tu bandeja de entrada.</p>
+            <p>Si no lo encuentras, revisa tu carpeta de spam.</p>
+        </div>
+    </div>
+
+    <script src="olvidaste la contraseña.js"></script>
+</body>
+</html>

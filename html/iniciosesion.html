@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../css/iniciosesion.css">
+    <title>NEX-TECH MECH-DOOM - Inicio de Sesión</title>
+</head>
+<body>
+    
+    <nav class="tech-nav navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand brand-name" href="index.php">
+                <i class="bi bi-cpu-fill me-2"></i>NEX-TECH MECH-DOOM
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="inicio.php">
+                            <i class="bi bi-house me-1"></i>Inicio
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="editaryeliminardato.php">
+                            <i class="bi bi-arrow-repeat me-1"></i>CRUD
+
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="crearusuario.html">
+                            <i class="bi bi-person-plus me-1"></i>Crear Usuario
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="iniciosesion.html">
+                            <i class="bi bi-box-arrow-in-right me-1"></i>Iniciar Sesión
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+   
+    <main class="flex-grow-1">
+        <div class="container">
+            <h1 class="page-title">Inicio de Sesión</h1>
+            
+            <div class="login-wrapper">
+                <form class="form-container" action="../php/iniciosesion.php" method="POST">
+                    <div class="form-header">
+                        <i class="bi bi-shield-lock"></i>
+                        <h2>Acceso Seguro</h2>
+                        <p>Ingresa tus credenciales para continuar</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="usuario">
+                            <i class="bi bi-person"></i>Nombre de Usuario
+                        </label>
+                        <input type="text" id="usuario" name="nombre" placeholder="Ingresa tu usuario" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">
+                            <i class="bi bi-key"></i>Contraseña
+                        </label>
+                        <input type="password" id="password" name="contraseña" placeholder="Ingresa tu contraseña" required>
+                        <button type="button" class="password-toggle" id="togglePassword">
+                            <i class="bi bi-eye"></i>
+                        </button>
+                    </div>
+
+                    <div class="form-options">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="rememberMe">
+                            <label class="form-check-label" for="rememberMe">
+                                Recordar sesión
+                            </label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="login-btn">
+                        <span class="btn-text">Ingresar al Sistema</span>
+                        <div class="btn-loader"></div>
+                    </button>
+
+                    <div class="form-footer">
+                        <p>¿No tienes una cuenta? <a href="crearusuario.html">Regístrate aquí</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+   
+    <footer class="tech-footer">
+        <div class="container">
+            <div class="footer-social">
+                <a href="#" class="social-link">
+                    <i class="bi bi-facebook"></i>
+                </a>
+                <a href="#" class="social-link">
+                    <i class="bi bi-twitter"></i>
+                </a>
+                <a href="#" class="social-link">
+                    <i class="bi bi-instagram"></i>
+                </a>
+                <a href="#" class="social-link">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+                <a href="#" class="social-link">
+                    <i class="bi bi-github"></i>
+                </a>
+            </div>
+            <p class="footer-text">© 2025 NEX-TECH MECH-DOOM. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    
+    <script src="../iniciar sección.js"></script>
+</body>
+</html>
